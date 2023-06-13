@@ -128,3 +128,5 @@ def preprocess(text):
     single_char_string_removed = remove_1or2_strings(duplicate_removed)
 
     return single_char_string_removed
+
+#testers
