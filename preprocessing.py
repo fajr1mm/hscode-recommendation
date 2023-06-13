@@ -129,4 +129,4 @@ def preprocess(text):
 
     return single_char_string_removed
 
-#testing
+#testing lagi 2 coba lagi
