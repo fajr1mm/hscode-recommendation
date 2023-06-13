@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<head>
+    <title>Search Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Search Page</h1>
+        <h4>Pencarian kode HS berdasarkan nama komoditas</h4>
+        <form action="/search" method="POST">
+            <input type="text" name="query" placeholder="Masukkan Kata Kunci / Nama Komoditas">
+            <br>
+            <button type="submit" class="button-block">Search</button>
+
+        </form>
+    </div>
+</body>
+
+
+  
+{% endblock content %}

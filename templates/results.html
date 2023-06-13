@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<style>
+    table {
+        font-family: sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid;
+        padding: 5px;
+    }
+
+    td, th {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #000000;
+    }
+
+    th {
+    background-color: #02275d;
+    }
+</style>
+
+<div class="container">
+    <h1>Hasil Pencarian kode HS untuk "{{ query }}"</h1>
+    <h3> Berikut 10 rekomendasi kode HS yang mungkin</h3>
+</div>
+<div class="container">
+    <table text-align: center;>
+        <tr>
+        <th style="color:#ffffff;">HS Code</th>
+        <th style="color:#ffffff;">Uraian Barang (Indonesia)</th>
+        <th style="color:#ffffff;">Uraian Barang (Inggris)</th>
+        <th style="color:#ffffff;">Score</th>
+        </tr>
+        <tr>
+        <td>A</td>
+        <td>Desc_ID_1</td>
+        <td>Desc_EN_1</td>
+        <td>85.5</td>
+        </tr>
+        <tr>
+        <td>B</td>
+        <td>Desc_ID_2</td>
+        <td>Desc_EN_2</td>
+        <td>92.1</td>
+        </tr>
+        <tr>
+        <td>C</td>
+        <td>Desc_ID_3</td>
+        <td>Desc_EN_3</td>
+        <td>78.3</td>
+        </tr>
+        <tr>
+        <td>D</td>
+        <td>Desc_ID_4</td>
+        <td>Desc_EN_4</td>
+        <td>95.6</td>
+        </tr>
+        <tr>
+        <td>E</td>
+        <td>Desc_ID_5</td>
+        <td>Desc_EN_5</td>
+        <td>88.9</td>
+        </tr>
+        <tr>
+            <td>F</td>
+            <td>Desc_ID_5</td>
+            <td>Desc_EN_5</td>
+            <td>88.9</td>
+        </tr>
+        <tr>
+            <td>G</td>
+            <td>Desc_ID_5</td>
+            <td>Desc_EN_5</td>
+            <td>88.9</td>
+        </tr>
+        <tr>
+            <td>H</td>
+            <td>Desc_ID_5</td>
+            <td>Desc_EN_5</td>
+            <td>88.9</td>
+        </tr>
+        <tr>
+            <td>I</td>
+            <td>Desc_ID_5</td>
+            <td>Desc_EN_5</td>
+            <td>88.9</td>
+        </tr>
+        <tr>
+            <td>J</td>
+            <td>Desc_ID_5</td>
+            <td>Desc_EN_5</td>
+            <td>88.9</td>
+        </tr>
+    </table>
+</div>
+{% endblock content %}

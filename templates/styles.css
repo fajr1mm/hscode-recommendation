@@ -1,0 +1,33 @@
+table {
+    font-family: sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid;
+    padding: 5px;
+}
+
+td, th {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #000000;
+}
+
+th {
+    background-color: #02275d;
+    color: #ffffff;
+}
+
+.button-block {
+    display: block;
+    margin-top: 20px; /* memberikan ruang margin di atas tombol */
+}
+
+.header {
+    background-color: blue;
+    color: white;
+}
+
+.images {
+    width: 10000px; 
+    height: 10000px;
+}
