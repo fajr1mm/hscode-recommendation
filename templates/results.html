@@ -1,7 +1,26 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<style>
+{{ query }}
+<!-- <br>
+{{b}}
+<br>
+{{result}}
+
+{% for res in result %}
+    {{res}}
+{% endfor %}
+ -->
+
+{% for item in result %}
+    <li>
+        <p>Nohs: {{ item[0] }}</p>
+        <p>Deskripsi HS: {{ item[1][0] }}</p>
+        <p>Result: {{item[1][1]}}</p>
+    </li>
+{% endfor %}
+
+<!-- <style>
     table {
         font-family: sans-serif;
         border-collapse: collapse;
@@ -22,7 +41,7 @@
 </style>
 
 <div class="container">
-    <h1>Hasil Pencarian kode HS untuk "{{ query }}"</h1>
+    <h1>Hasil Pencarian kode HS untuk "{{query}}"</h1>
     <h3> Berikut 10 rekomendasi kode HS yang mungkin</h3>
 </div>
 <div class="container">
@@ -33,66 +52,14 @@
         <th style="color:#ffffff;">Uraian Barang (Inggris)</th>
         <th style="color:#ffffff;">Score</th>
         </tr>
+        {% for row in data %}
         <tr>
-        <td>A</td>
-        <td>Desc_ID_1</td>
-        <td>Desc_EN_1</td>
-        <td>85.5</td>
+            <td>{{ row['HS Code'] }}</td>
+            <td>{{ row['Uraian Barang (Indonesia)'] }}</td>
+            <td>{{ row['Uraian Barang (Inggris)'] }}</td>
+            <td>{{ row['Score'] }}</td>
         </tr>
-        <tr>
-        <td>B</td>
-        <td>Desc_ID_2</td>
-        <td>Desc_EN_2</td>
-        <td>92.1</td>
-        </tr>
-        <tr>
-        <td>C</td>
-        <td>Desc_ID_3</td>
-        <td>Desc_EN_3</td>
-        <td>78.3</td>
-        </tr>
-        <tr>
-        <td>D</td>
-        <td>Desc_ID_4</td>
-        <td>Desc_EN_4</td>
-        <td>95.6</td>
-        </tr>
-        <tr>
-        <td>E</td>
-        <td>Desc_ID_5</td>
-        <td>Desc_EN_5</td>
-        <td>88.9</td>
-        </tr>
-        <tr>
-            <td>F</td>
-            <td>Desc_ID_5</td>
-            <td>Desc_EN_5</td>
-            <td>88.9</td>
-        </tr>
-        <tr>
-            <td>G</td>
-            <td>Desc_ID_5</td>
-            <td>Desc_EN_5</td>
-            <td>88.9</td>
-        </tr>
-        <tr>
-            <td>H</td>
-            <td>Desc_ID_5</td>
-            <td>Desc_EN_5</td>
-            <td>88.9</td>
-        </tr>
-        <tr>
-            <td>I</td>
-            <td>Desc_ID_5</td>
-            <td>Desc_EN_5</td>
-            <td>88.9</td>
-        </tr>
-        <tr>
-            <td>J</td>
-            <td>Desc_ID_5</td>
-            <td>Desc_EN_5</td>
-            <td>88.9</td>
-        </tr>
+        {% endfor %}
     </table>
-</div>
+</div> -->
 {% endblock content %}

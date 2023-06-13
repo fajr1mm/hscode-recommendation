@@ -52,7 +52,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #02275D;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -95,7 +95,7 @@ section {
 }
 
 footer {
-    background-color: #333;
+    background-color: #02275D;
     color: #fff;
     padding: 10px;
     text-align: center;

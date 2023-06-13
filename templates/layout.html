@@ -5,10 +5,10 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <header style="background-color:#02275d;">
+    <header>
         <div class="logo">
-            <img src="{{ url_for('static', filename='Logo LNSW.jpg') }}" alt="Logo LNSW" class="images">
-            <h3 style="background-color:#02275d;">Lembaga National Single Window</h3>
+            <img src="{{ url_for('static', filename='Logo LNSW.jpg') }}" alt="Logo LNSW">
+            <h1>Lembaga National Single Window</h1>
         </div>
         <nav>
             <ul>
@@ -17,10 +17,10 @@
         </nav>
     </header>
     <section>
-        {% block content %} {% endblock %}
+        {% block content %}{% endblock %}
     </section>
-    <footer style="background-color:#02275d;">
-        <p style="background-color:#02275d;">&copy; 2023 Lembaga National Single Window. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2023 Lembaga National Single Window. All rights reserved.</p>
     </footer>
 </body>
 </html>
