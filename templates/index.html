@@ -1,19 +1,51 @@
 {% extends "layout.html" %}
 
 {% block content %}
+{{ query }}
 <head>
     <title>Search Page</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='static/styles.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>Search Page</h1>
-        <h4>Pencarian kode HS berdasarkan nama komoditas</h4>
-        <form action="/search" method="POST">
-            <input type="text" name="query" placeholder="Masukkan kata kunci / nama komoditas">
-            <br>
-            <button type="submit">Search</button>
-        </form>
+    {% if query %}
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">No HS</th>
+            <th scope="col">Deskripsi</th>
+            <th scope="col">Result</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for item in result %}
+          <tr>
+            <p>Nohs: {{ item[0] }}</p>
+            <p>Deskripsi HS: {{ item[1][0] }}</p>
+            <p>Result: {{item[1][1]}}</p>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+    <div style="
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 3rem;
+    background-size: cover;
+    background-image: linear-gradient(45deg, 
+    rgba(255,0,0,0.5),
+     rgba(255,166,0,0.5), 
+     rgba(0,0,255,0.44)), 
+    url(../static/bg-hero.jpg);" >
+        <div style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            <h1>HSCODE ENGINE RECOMMENDATION</h1>
+        </div>
     </div>
+    {% endif %}
 </body>
 {% endblock content %}
